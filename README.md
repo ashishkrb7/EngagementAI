@@ -4,6 +4,59 @@
 
 ## Introduction
 This project uses AWS Rekognition for the emotion detection. Based on the emotion detected, further analysis is made.
+Algorithm working behind Engagement analysis
+```
+0.8*("CALM"+"HAPPY")-0.1*("SURPRISED"+"CONFUSED"+"ANGRY"+"SAD"+"DISGUSTED"+"FEAR")+0.2*("Marks Obtained"+0.1*"Question Asked")
+```
+## Workflow Diagram
+<center><img src="./db/input/images/EngagementAI.png" width="300" height="200"></center>
+
+## Folder Architecture
+
+                C:.
+                │   app.py
+                │   README.md
+                │   requirements.txt
+                │
+                ├───.vscode
+                │       settings.json
+                │
+                ├───config
+                │       credentials.json
+                │
+                ├───db
+                │   ├───artifact
+                │   ├───input
+                │   │   ├───docs
+                │   │   │       Marks.csv
+                │   │   │       QnA.csv
+                │   │   │       Research Export for analysis.xlsx
+                │   │   │
+                │   │   ├───images
+                │   │   │       frame33.jpg
+                │   │   │       output.jpg
+                │   │   │
+                │   │   ├───json
+                │   │   │       frame33.json
+                │   │   │
+                │   │   └───videos
+                │   │       ├───OutputDump
+                │   │       └───SourceDump
+                │   └───masterImg
+                ├───notebook
+                │       analysis.ipynb
+                │
+                ├───out
+                └───src
+                    │   engine.py
+                    │
+                    └───utils
+                        │   face_detect.py
+                        │   face_similarity.py
+                        │   Videos2Images.py
+                        │
+                        └───models
+                                haarcascade_frontalface_default.xml
 
 ## How to setup the environment for this project?
 1. Install Anaconda from this link https://www.anaconda.com/products/individual#windows and follow the steps mentioned in following link
