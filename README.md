@@ -142,7 +142,7 @@ python app.py
 -   `src\utils\face_similarity.py` : To find the Cosine similarity between two images.
 
 ## License
-[![MIT License](https://img.shields.io/github/license/ashishkrb7/EngagementAI.svg?style=flat-square&colorB=C62121)](https://github.com/ashishkrb7/EngagementAI/blob/main/LICENSE)
+[![MIT License](https://img.shields.io/github/license/ashishkrb7/EngagementAI.svg?style=flat-square&colorB=C62121)](https://github.com/ashishkrb7/EngagementAI/blob/master/LICENSE)
 ```
 Copyright (c) 2021 Ashish Kumar
 ```
