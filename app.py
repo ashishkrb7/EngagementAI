@@ -158,7 +158,8 @@ if __name__=="__main__":
     V2I=int(input("\nDo you want to convert video to image?[Press 1 for Yes and 0 for No or you alread have in OutputDump folder]:"))
 
     if V2I==1:
-        Videos2Images.run(inputpath = rootpath+'/db/input/videos/SourceDump/Finance & Corporate Committee - Zoom Meeting.mp4',fps = 100,imageExt=".jpg",OutputName=jsonFileAlias)
+        filename=input("\nEnter video file name [e.g. Finance & Corporate Committee - Zoom Meeting.mp4 ]:")
+        Videos2Images.run(inputpath = rootpath+f'/db/input/videos/SourceDump/{filename}',fps = 100,imageExt=".jpg",OutputName=jsonFileAlias)
 
         selection=int(input("\nDo you want to automatically select the images? [Press 1 for Yes and 0 for No]:"))
         try:

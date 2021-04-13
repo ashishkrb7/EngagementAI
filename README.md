@@ -4,10 +4,10 @@
 
 ## Introduction
 This project uses AWS Rekognition for the emotion detection. Based on the emotion detected, further analysis is made.
-Algorithm working behind Engagement analysis
-```
-0.8*("CALM"+"HAPPY")-0.1*("SURPRISED"+"CONFUSED"+"ANGRY"+"SAD"+"DISGUSTED"+"FEAR")+0.2*("Marks Obtained"+0.1*"Question Asked")
-```
+> **Motivation**: For last one year due to lockdown. Most of the lectures were arranging through video call. This work is an approach towards scoring the engagement of student during lecture by identifying there emotions. We have used very simple formula to calculate the Engagement score, which can be scaled to more complex form.
+
+        0.8*("CALM"+"HAPPY")-0.1*("SURPRISED"+"CONFUSED"+"ANGRY"+"SAD"+"DISGUSTED"+"FEAR")+0.2*("Marks Obtained"+0.1*"Question Asked")
+
 
 ## Technology used
 -   Python
@@ -16,7 +16,7 @@ Algorithm working behind Engagement analysis
 ## Workflow Diagram
 ![EngagementAI](./db/input/images/EngagementAI.png)
 
-User need to put the Zoom video recording at [./db/input/videos/SourceDump/](./db/input/videos/SourceDump/). Then execute [./app.py](./app.py). This Convert Video to images. Do selection of images, face recogination, upload it in S3 and do the analysis based on the formula mentioned above. Final output will be in the form of [.xlsx](./FinalAnalysisReport.xlsx) file. Amazon Rekogination is used to generate emotion of face and Cosine similarity is used to find out the particular person name in particular video frame.
+User need to put the Zoom video recording at [./db/input/videos/SourceDump/](./db/input/videos/SourceDump/). Then execute [./app.py](./app.py). This Convert Video to images, do selection of images, face recogination, upload it in S3 and do the analysis based on the formula mentioned above. Final output will be in the form of [.xlsx](./FinalAnalysisReport.xlsx) file. Amazon Rekogination is used here to generate emotions in face and Cosine similarity to find out the particular person name in particular video frame.
 
 ## Folder Architecture
 
