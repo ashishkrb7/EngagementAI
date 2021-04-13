@@ -16,7 +16,7 @@ Algorithm working behind Engagement analysis
 ## Workflow Diagram
 ![EngagementAI](./db/input/images/EngagementAI.png)
 
-User need to put the Zoom video recording at [./db/input/videos/SourceDump/](./db/input/videos/SourceDump/). Then execute [./app.py](./app.py). This Convert Video to images. Do selection of images, face recogination, upload it in S3 and do the analysis based on the formula mentioned above. Final output will be in the form of [.xlsx](./FinalAnalysisReport.xlsx) file
+User need to put the Zoom video recording at [./db/input/videos/SourceDump/](./db/input/videos/SourceDump/). Then execute [./app.py](./app.py). This Convert Video to images. Do selection of images, face recogination, upload it in S3 and do the analysis based on the formula mentioned above. Final output will be in the form of [.xlsx](./FinalAnalysisReport.xlsx) file. Amazon Rekogination is used to generate emotion of face and Cosine similarity is used to find out the particular person name in particular video frame.
 
 ## Folder Architecture
 
