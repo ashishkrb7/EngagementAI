@@ -80,14 +80,23 @@ https://docs.anaconda.com/anaconda/install/windows/
 ## How to use this software?
 
 Step 1:
-Download Repository
+Download Repository and dependencies
+```bash
+conda create -n engagementai python=3.7.3
+```
+```bash
+conda activate engagementai
+```
+
 ```bash
 git clone https://github.com/ashishkrb7/EngagementAI.git
 ```
 ```bash
 cd EngagementAI
 ```
-
+```bash
+python -m pip install -r requirements.txt
+```
 Step 2:
 Modify [./config/credentials.json](./config/credentials.json)
 ```JSON
