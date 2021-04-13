@@ -29,9 +29,6 @@ jsonFileAlias="frame"
 Marks=pd.read_csv(rootpath + "/db/input/docs/Marks.csv")
 QnA=pd.read_csv(rootpath + "/db/input/docs/QnA.csv")
 
-ArtifactFiles = glob.glob(rootpath+ "/db/artifact/Person_*.jpg") # get all the file name with directory ends with *.jpg
-PersonName = list(map(lambda x: os.path.split(x)[1].split(".")[0],ArtifactFiles)) # To get the name of the persons
-
 def EmotionalAnalysis():
     """ Tp do the emotional analysis of the selected images """
 
@@ -206,6 +203,8 @@ if __name__=="__main__":
     entry2 = int(input("\nDo you want to proceed for Engagement analysis ? [Type 1 for yes and 0 for No]"))
 
     if entry2==1:
+        ArtifactFiles = glob.glob(rootpath+ "/db/artifact/Person_*.jpg") # get all the file name with directory ends with *.jpg
+        PersonName = list(map(lambda x: os.path.split(x)[1].split(".")[0],ArtifactFiles)) # To get the name of the persons
         print(f"[info...] Analysis of images initiated")
         EngagementAnalysisBatch(threshold=0.8) # Individual analysis generation
         ExcelCombine() # Combine the individual Spreadsheet
