@@ -9,7 +9,7 @@ Algorithm working behind Engagement analysis
 0.8*("CALM"+"HAPPY")-0.1*("SURPRISED"+"CONFUSED"+"ANGRY"+"SAD"+"DISGUSTED"+"FEAR")+0.2*("Marks Obtained"+0.1*"Question Asked")
 ```
 ## Workflow Diagram
-<center><img src="./db/input/images/EngagementAI.png" width="300" height="200"></center>
+![EngagementAI](./db/input/images/EngagementAI.png)
 
 ## Folder Architecture
 
