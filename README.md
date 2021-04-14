@@ -102,7 +102,7 @@ Modify [./config/credentials.json](./config/credentials.json)
         "User name": "ashish_temp",
         "Access key ID": "XXXX",
         "Secret access key": "XXXX",
-        "Bucket_name":"rekoengagementai",
+        "Bucket_name":"XXXX",
         "Folder_in_S3":"artifact"
     }
 ```
