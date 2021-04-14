@@ -5,7 +5,7 @@
 This project uses AWS Rekognition for emotion detection. Based on the emotion detected, further analysis is made
 > **Motivation**: Due to lockdown., most of the lectures were arranged through video call. This work is an approach towards scoring the engagement of student during the lecture by identifying their emotions. We have used a very simple formula to calculate the Engagement score, which can be scaled to a more complex form.
 
-        0.8*("CALM"+"HAPPY")-0.1*("SURPRISED"+"CONFUSED"+"ANGRY"+"SAD"+"DISGUSTED"+"FEAR")+0.2*("Marks Obtained"+0.1*"Question Asked")
+        0.8*("CALM"+"HAPPY")-0.1*("SURPRISED"+"CONFUSED"+"ANGRY"+"SAD"+"DISGUSTED"+"FEAR")+0.2*("Marks Obtained")+0.1*("Question Asked")
 
 ## Technology used
 -   Python
