@@ -15,6 +15,9 @@ from PIL import Image
 from tqdm import tqdm
 from random import sample
 from src.utils import Videos2Images
+from datetime import datetime
+
+now = str(datetime.now())
 
 # Get all the files in directory
 rootpath = os.path.abspath(os.path.join(os.path.dirname(__file__), "./")).replace("\\", "/")
@@ -81,7 +84,7 @@ def EngagementAnalysis(photo,outputjson_emotion,k,threshold=0.80):
             output["Person"]=PersonName[similarity_score.index(max(similarity_score))]
             output["Marks Obtained"] = float(list(Marks[Marks["Person"]==output["Person"]]["Percentage"])[0])
             output["Question Asked"] = float(list(QnA[QnA["Person"]==output["Person"]]["Asked Question"])[0])
-            output["Image Link"] = f"https://{Bucket_name}.s3.amazonaws.com/{Folder_in_S3}/{PersonName[similarity_score.index(max(similarity_score))]}.jpg"
+            output["Image Link"] = f"https://{Bucket_name}.s3.amazonaws.com/{Folder_in_S3}/{PersonName[similarity_score.index(max(similarity_score))]}_{now}.jpg"
         else:
             output["Person"] = "XXXXX"
             output["Marks Obtained"] = np.nan
