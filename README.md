@@ -114,10 +114,12 @@ Modify *.csv for [Marks](./db/input/docs/Marks.csv) and [QnA](./db/input/docs/Qn
 
 Step 4:
 ```bash
+(engagementai) x:\xxxx>python
 Python 3.7.3 (default, Apr 24 2019, 15:29:51) [MSC v.1915 64 bit (AMD64)] :: Anaconda, Inc. on win32
 Type "help", "copyright", "credits" or "license" for more information.
 >>> from src.engine import reset
 >>> reset()
+>>> exit()
 ```
 
 Step 5:
